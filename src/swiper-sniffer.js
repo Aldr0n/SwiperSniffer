@@ -73,7 +73,7 @@ const SwiperSniffer = (function () {
                         var observer = new MutationObserver(function (mutations, obs) {
                             if (isSwiperInitialized(node)) {
                                 debugLog("Swiper instance initialized:", dataId);
-                                swiperInstances[dataId] = node;
+                                swiperInstances[dataId] = node.swiper;
                                 applyPendingOperations(dataId);
                                 obs.disconnect();
                             }
